@@ -5,18 +5,55 @@
         .then(response => response.json())
         .then(data=> {
             console.log(data)
-            var moviesHTML = "";
-            $.each(html, function (index, movie) {
-                moviesHTML += "<div class='movie' data-id='" + movie.id + "'>";
-                moviesHTML += "<h3>" + movie.title + "</h3>";
-                moviesHTML += "<p>Rating: " + movie.rating + "</p>";
-                moviesHTML += "<button class='edit-movie'>Edit</button>";
-                moviesHTML += "<button class='delete-movie'>Delete</button>";
-                moviesHTML += "</div>";
-            });
-            // Replace loading message with generated HTML
-            $("#movies-list").html(moviesHTML);
+
+            function displayMovies() {
+                moviesContainer.innerHTML = '';
+                movies.forEach(movie => {
+                    const movieDiv = document.createElement('div');
+                    const titleParagraph = document.createElement('p');
+                    const ratingParagraph = document.createElement('p');
+                    const editButton = document.createElement('button');
+                    const deleteButton = document.createElement('button');
+                    titleParagraph.innerText = movie.title;
+                    ratingParagraph.innerText = `Rating: ${movie.rating}`;
+                    editButton.innerText = 'Edit';
+                    deleteButton.innerText = 'Delete';
+                    editButton.addEventListener('click', () => {
+                        editMovieForm.elements.id.value = movie.id;
+                        html += `<h4>Movie title: ${data.list[23].title}</h4>`;
+                        $("#movie-list").html(html);
+
+                    })
+                })
+            }
         })
+
+
+
+
+         //    var moviesHTML = "";
+         //    $.each(, function (index, movie) {
+         //        moviesHTML += "<div class='movie' data-id='" + movie.id + "'>";
+         //        moviesHTML += "<h3>" + movie.title + "</h3>";
+         //        moviesHTML += "<p>Rating: " + movie.rating + "</p>";
+         //        moviesHTML += "<button class='edit-movie'>Edit</button>";
+         //        moviesHTML += "<button class='delete-movie'>Delete</button>";
+         //        moviesHTML += "</div>";
+         //    });
+         //    // Replace loading message with generated HTML
+         //    $("#movies-list").html(moviesHTML); const movieList = document.getElementById('movie-list');
+         //    movieList.innerHTML = '';
+         //    data.forEach(movie => {
+         //        const movieElement = document.createElement('div');
+         //        movieElement.classList.add('movie');
+         //        movieElement.innerHTML = `
+         // <h2>${movie.title}</h2>
+         //    <p>${movie.description}</p>
+         //    <img src="${movie.poster}" alt="${movie.title}">`;
+         //
+         //        movieList.appendChild(movieElement);
+         //    });
+
 // error: function() {
 //     $("#movies-list").html("Error loading movies.");
 // }
