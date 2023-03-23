@@ -1,4 +1,14 @@
-#loading-gif {
-    width: 100px;
-    height: 100px;
+.loading-gif{
+    height: 90px;
+    width: 90px;
+}
+img {
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    font-style: italic;
+}
+body {
+    background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876003.jpg?w=1800&t=st=1679540963~exp=1679541563~hmac=409cf61e2a801057220a7435ccebaffad6b924c477f686c87530d5e41211a776");
 }

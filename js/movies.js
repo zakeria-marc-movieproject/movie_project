@@ -1,13 +1,13 @@
 "use strict"
-let toggle = $('#reload').toggleClass('hidden')
+let toggle = $('#load').toggleClass('hidden')
 let addRating = document.getElementById("added-movie")
 let addTitle = document.getElementById('submit-title');
 let submitButton = document.querySelector('#submit-movie');
 let filterMovie = document.querySelector("#movieList");
 let i;
-document.getElementById("loading-gif").style.display = '';
+document.getElementById("loading-gif").style.display = 'none';
 getList();
-
+$('#load').toggleClass('hidden')
 function getList() {
     let movieList =document.getElementById('movieList')
     fetch(`https://just-cold-diver.glitch.me/movies`)
@@ -67,7 +67,7 @@ function getList() {
                 })
             })
                 // Hides loading image after movies displayed
-                // .then(() => $('#reload').toggleClass('hidden'))
+                .then(() => $('#load').toggleClass('hidden'))
             function addMovie(m) {
                 m.preventDefault();
                 let movieObj = {
@@ -111,7 +111,7 @@ function getList() {
                     .then(() => fetch(`https://just-cold-diver.glitch.me/movies`)).then(resp => resp.json()).then(() => getList());
             }
 
-            submitButton.addEventListener('click', addMovie);
+            // submitButton.addEventListener('click', addMovie);
 
 // Edit Rating Function
             function editRating(rating) {
