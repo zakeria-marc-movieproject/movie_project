@@ -13,16 +13,19 @@
 
 </head>
 <body>
-<center><h1 style="color:navajowhite;">Movie App</h1></center><!--jquery-->
+<h1 style="color:navajowhite;">Movie App</h1>
+<!--jquery-->
 <script src="js/jquery.js"></script>
 <!--javascript-->
 <script src="js/movies.js"></script>
 
 <!--list to go-->
-
-    <div id="movies-container">
-        <p id="loading-message"></p>
-    </div>
+<<div class="loadingimage" id="reload">
+    <img src="js/img/gif.gif">
+</div>
+<!--    <div id="movies-container">-->
+<!--        <p id="loading-message"></p>-->
+<!--    </div>-->
     <form id="add-movie-form"><p>
         <label for="title-input" style="color: navajowhite">Title:</label>
         <input type="text" id="title-input" name="title">
@@ -41,10 +44,9 @@
         <button type="button" id="cancel-edit-button">Cancel</button>
     </p1>
     </form>
-    <div class="loading-gif" id="load">
-        <img id="loading-gif" src="js/img/gif.gif">
-    </div>
-    <div id="movieList"></div>
+
+
+<div id="movieList"></div>
 
 <!--<form id="edit-movie-form">-->
 <!--</form>-->

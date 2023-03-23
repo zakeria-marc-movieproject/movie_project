@@ -1,8 +1,10 @@
-.loading-gif{
-    height: 90px;
-    width: 90px;
-}
+/*.loadingimage{*/
+/*    height: 20px;*/
+/*    width:20em;*/
+/*}*/
 img {
+    height: 100px;
+    width: 100px;
 }
 body {
     height: 100vh;
@@ -11,4 +13,10 @@ body {
 }
 body {
     background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876003.jpg?w=1800&t=st=1679540963~exp=1679541563~hmac=409cf61e2a801057220a7435ccebaffad6b924c477f686c87530d5e41211a776");
+}
+.editThis{
+    width: 100px;
+}
+#movieList{
+    color: red;
 }
