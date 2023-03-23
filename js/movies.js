@@ -30,18 +30,20 @@ function getList() {
             //      Hides loading image after movies displayed
             $('#reload').toggle('hidden')
 
-            // // delete button
+            // delete button
             // $('.deleteThis').click(function () {
             //     deleteMovie($(this).val());
-            //     // edit button
-            //     $('.editThis').click(function () {
-            //         let editId = ($(this).val());
-            //         let title = $(this).parent().children('h2').first().html()
-            //         let rating = $(this).parent().children('h5').first().html()
-            //         $(this).parent().children('.saveThis').toggleClass('hidden')
-            //         $(this).toggleClass('hidden')
-            //         $(this).parent().children('h2').first().html(`<input type='text' value='${title}' class="editarea container-fluid">`);
-            //         $(this).parent().children('h5').first().html(editRating(rating));
+            // })
+                // edit button
+                $('.editThis').click(function () {
+                    let editId = ($(this).val());
+                    let title = $(this).parent().children('h2').first().html()
+                    let rating = $(this).parent().children('h5').first().html()
+                    $(this).parent().children('.saveThis').toggleClass('hidden')
+                    $(this).toggleClass('hidden')
+                    $(this).parent().children('h2').first().html(`<input type='text' value='${title}' class="editarea container-fluid">`);
+                    $(this).parent().children('h5').first().html(editRating(rating));
+                })
             // //
             // //         // // Save Changes Button
             //         $(".saveThis").click(function () {
