@@ -3,9 +3,9 @@ let toggle = $('#load').toggleClass('hidden')
 let addRating = document.getElementById("added-movie")
 let addTitle = document.getElementById('submit-title');
 let submitButton = document.querySelector('#submit-movie');
-let filterMovie = document.querySelector("#movieList");
-let i;
-document.getElementById("loading-gif").style.display = 'none';
+let i = document.querySelector("#movieList");
+
+// document.getElementById("loading-gif").style.display = 'none';
 getList();
 $('#load').toggleClass('hidden')
 function getList() {
@@ -25,6 +25,7 @@ function getList() {
                 html += `</div>`
                 console.log(data);
             }
+
             // delete button
             $('.deletethis').click(function () {
                 deleteMovie($(this).val());
@@ -67,7 +68,7 @@ function getList() {
                 })
             })
                 // Hides loading image after movies displayed
-                .then(() => $('#load').toggleClass('hidden'))
+                $('#load').toggleClass('hidden')
             function addMovie(m) {
                 m.preventDefault();
                 let movieObj = {
@@ -162,6 +163,7 @@ function getList() {
                 </select>`
                     return html;
                 }
+                movieList.innerHTML = html;
             }
         })
 }
