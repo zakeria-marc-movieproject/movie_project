@@ -5,6 +5,7 @@ let addTitle = document.getElementById('submit-title');
 let submitButton = document.querySelector('#submit-movie');
 let filterMovie = document.querySelector("#movieList");
 let i;
+document.getElementById("loading-gif").style.display = '';
 getList();
 
 function getList() {
